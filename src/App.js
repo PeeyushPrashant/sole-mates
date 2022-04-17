@@ -1,8 +1,15 @@
 import "./App.css";
-import logo from "./logo.png";
+import { Home } from "../src/pages/index";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
+  );
 }
 
 export default App;
