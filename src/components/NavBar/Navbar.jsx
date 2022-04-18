@@ -1,6 +1,10 @@
 import "./NavBar.css"
+import { useNavigate } from "react-router-dom"
+import { useAuth } from "../../contexts/auth-context";
 
 export const NavBar=()=>{
+  const {token,logOutHandler} = useAuth();
+  const navigate=useNavigate();
     return (
         <>
         <nav className="navbar flex-row">
@@ -22,12 +26,18 @@ export const NavBar=()=>{
          
         </div>
         <div className="saved-item-container flex-row">
-        
-        <div className="saved-item flex-row"
-        // onClick={()=>navigate("/login")}
+        {!token?<div className="saved-item flex-row"
+        onClick={()=>navigate("/login")}
         >
-        <i class="fas fa-sign-in-alt  nav-icon"></i>
+        <i className="fas fa-sign-in-alt  nav-icon"></i>
+        </div>:
+        <div className="saved-item flex-row"
+        onClick={logOutHandler}
+        >
+        <i className="fas fa-user-circle nav-icon"></i>
         </div>
+        }
+        
         
           <div className="saved-item flex-row"
         //   onClick={changeTheme}
@@ -37,7 +47,7 @@ export const NavBar=()=>{
           <div className="saved-item flex-row"
         //   onClick={sideBarHandler}
           >
-          <i class="fas fa-bars nav-icon hamburger"></i>
+          <i className="fas fa-bars nav-icon hamburger"></i>
           </div>
         </div>
       </nav>
