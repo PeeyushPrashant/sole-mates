@@ -1,5 +1,5 @@
 import "./App.css";
-import { Home, Login, SignUp } from "../src/pages/index";
+import { Home, Login, SignUp } from "../src/pages";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
