@@ -3,7 +3,7 @@
   height: auto;
   gap: 1rem;
   background-color: var(--background-color);
-  color: var(--white-light);
+  color: var(--text-color);
   box-shadow: 0 0 0.6rem var(--card-shadow);
 }
 .thumbnail {

@@ -29,7 +29,7 @@
 .search-icon {
   position: absolute;
   left: 2rem;
-  color: var(--white-light);
+  color: var(--text-color);
 }
 .filter-icon {
   position: absolute;
@@ -42,7 +42,7 @@
   padding-left: 4.5rem;
   border: none;
   background-color: var(--grey);
-  color: var(--white-light);
+  color: var(--text-color);
   border-radius: 0.5rem;
 }
 .nav-input:focus {
