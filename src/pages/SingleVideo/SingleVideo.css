@@ -1,0 +1,26 @@
+.single-video-cont {
+  padding: 3rem 5rem 3rem 0;
+  margin-left: 32rem;
+  width: 100%;
+  gap: 2rem;
+  color: var(--text-color);
+}
+.vid-title {
+  margin: 0;
+}
+.title-cont {
+  gap: 0.2rem;
+}
+.chips-container {
+  align-items: center;
+  gap: 2rem;
+}
+.chips {
+  gap: 0.7rem;
+  border-radius: 5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  background-color: var(--greyish-black);
+}

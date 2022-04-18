@@ -1,11 +1,12 @@
 :root {
-  --grey-medium: #adb5bd;
+  --grey-medium: #dcdee0;
   --grey: #34343d;
   --white: white;
-  --text-color: rgb(231, 220, 220);
+  --text-color: rgb(236, 227, 227);
   --card-shadow: #adb5bd;
   --red: #cf000f;
   --black: black;
+  --greyish-black: #34343d;
   --light-black: #191921;
   --orange: #f48c06;
   --background-color: #141319;
@@ -20,15 +21,16 @@
 }
 .main-cont {
   min-height: 100vh;
-  width: 100vw;
+  min-width: 100vw;
   gap: 2rem;
 }
 .right-main {
-  padding: 3rem 0;
+  padding: 3rem 4rem 3rem 0;
   margin-left: 33rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
-  gap: 5rem;
+  gap: 3rem;
   height: 100%;
+  width: 100%;
 }

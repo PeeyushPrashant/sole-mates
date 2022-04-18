@@ -1,10 +1,14 @@
 import "./VideoCard.css";
+import { useNavigate } from "react-router-dom";
 
 export const VideoCard=({item})=>{
-    const {image,title,creator,date}=item || {};
+    const {image,title,creator,date,_id}=item || {};
+    const navigate=useNavigate();
     return (
       <div className="card video-card">
-        <section>
+        <section
+        onClick={()=>navigate(`/video/${_id}`)}
+        >
           <img
             src={image}
             alt="thumbnail"

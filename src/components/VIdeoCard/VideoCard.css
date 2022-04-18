@@ -8,6 +8,7 @@
 }
 .thumbnail {
   height: 16rem;
+  cursor: pointer;
 }
 .title-container {
   justify-content: space-between;
