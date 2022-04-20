@@ -8,7 +8,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/nPfTMSAHVnM",
     title: "Puma Rollin Wild Rider Unboxing",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Today, we are unboxing the all new Puma Rollin Wild Rider which resonates with the youth culture This silhouette brings a whole new dimension to the Rider family, with fresh layers of material and a raw, edgy look.",
     creator: "Bobby Solez",
     date: "Jun 5, 2021",
   },
@@ -19,7 +19,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/DeYDTqJDG5I",
     title: "PUMA Sneakers You need",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Today on SneakerTalk we cover the top 10 Puma Sneakers you need in your collection! These are all my top Puma sneakers as of recently! Many Puma RS-X, Puma RS-X3, Puma Thunder Spectra and more!LINKS TO SOME SNEAKERS BELOW!",
     creator: "Sneaker Talk",
     date: "Mar 16, 2020",
   },
@@ -30,7 +30,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/myG1sbnfv6s",
     title: " Best Budget Puma Shoes",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "UNBOXING: BEST BUDGET WHITE SHOES/SNEAKERS on AMAZON 🔥 Shoes Haul Review 2021 | Puma, Red Tape, Bacca Bucci, Sports star",
     creator: "One Chance",
     date: "Oct 18, 2021",
   },
@@ -41,7 +41,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/9jtkNI4ybHI",
     title: "Top 10 ADIDAS Sneakers 2021",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Today we're counting down the Top 10 Adidas Shoe that you can rock right now in 2021! Check out these sneaker and don't forget to like,share & subscribe",
     creator: "Seth Fowler",
     date: "Jun 24, 2021",
   },
@@ -52,7 +52,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/4J_kxwT9zX4",
     title: "The Adidas Ultra Boost",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "From the complete knitted uppers to boxing the complete pair, this short exploration  in the construction of the Ultra Boost sheds light on the breakdown of the minimal, lightweight running shoe, and the attention to detail implemented by the workers.",
     creator: "Hypebeast",
     date: "Jan 30, 2015",
   },
@@ -63,7 +63,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/wMxqFtD-CCw",
     title: "Adidas Cricket Shoes Unboxing",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "In this video we'll be unboxing Size 10 adidas performance series cricket shoes CRI HASE CK0880, so do watch till the end.",
     creator: "PC Gaming & Sports",
     date: "Dec 27, 2018",
   },
@@ -74,7 +74,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/vgyJQ_bzpCY",
     title: "Unboxing Every Air Jordan Sneaker",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      " Unboxing every Air Jordan sneaker released during Michael Jordan's incredible professional basketball career.",
     creator: "Unbox Therapy",
     date: "Jun 12, 2017",
   },
@@ -85,7 +85,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/p8HhmCv45xo",
     title: "Top 5 Jordan 1’s under ₹20000",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "In this video we will be showing you Top 5 Jordan Snekaers under the most minimal range, do grab your deal and don't forget to like & share",
     creator: "Karan Khatri",
     date: "Nov 26, 2021",
   },
@@ -96,7 +96,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/dDEIpuApenE",
     title: "Air Jordan 1-35",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "The Air Jordan 35 is set to release this coming October 2020.  Lets go back and watch the evolution of Air Jordan from 1 - 35. ",
     creator: "Englatero Kicks",
     date: "Sep 15, 2020",
   },
@@ -107,7 +107,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/a5w-Nv7_GQ4",
     title: "Unboxing : My All Converse Sneaker",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "Unboxing : My All Converse Sneaker/Shoe Collection 2021 | White Snekers, Hightop sneakers, Canvas Shoes, Chuck Taylor, Chuck 70",
     creator: "One Chance",
     date: "Dec 16, 2021",
   },
@@ -118,7 +118,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/UJXFbqWuw9A",
     title: "Converse High Top vs Low Top",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "You guys seem to love these shoes and I get asked often on the channel which is better between the high top and the low top. Rather than answer the same question over and over, I thought it was time I made a video to help you decide.",
     creator: "Harry Has",
     date: "Dec 4, 2020",
   },
@@ -129,7 +129,7 @@ export const videos = [
     src: "https://www.youtube.com/embed/iimG6D0VXQ0",
     title: "5 Types of Converse",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+      "In this video we will see Top 5 TYPES Of CONVERSE To Have and what are the Best CONVERSE Shoes in 2021",
     creator: "The Sneaker Guy",
     date: "Jul 16, 2021",
   },

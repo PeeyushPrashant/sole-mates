@@ -28,3 +28,14 @@
 .creator {
   font-weight: 600;
 }
+
+@media screen and (max-width: 1500px) {
+  .video-card {
+    width: 29rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .video-card {
+    width: 97%;
+  }
+}
