@@ -8,7 +8,7 @@ export const SingleVideo=()=>{
     const videoArray= state.videos;
     const {videoId}=useParams();
     const video= videoArray.find((item)=>item._id===videoId) || {};
-    const {src,title,creator}= video;
+    const {src,title,creator,description}= video;
     return(
         <>
         <NavBar/>
@@ -47,6 +47,10 @@ export const SingleVideo=()=>{
                     <p>Save</p>
                     </div>
                 </section>
+                <footer className="vid-description flex-col">
+                   <h4>Description :</h4>
+                   <p>{description}</p>
+                </footer>
               </div>
            
         </main>
