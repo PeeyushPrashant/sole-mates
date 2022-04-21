@@ -3,6 +3,7 @@ import { ACTION_TYPE } from "../utils/ActionType";
 const InitialValue = {
   videos: [],
   watchlater: [],
+  liked: [],
 };
 
 const DataReducer = (state, action) => {
@@ -13,6 +14,10 @@ const DataReducer = (state, action) => {
       return { ...state, watchlater: action.payload };
     case ACTION_TYPE.REMOVE_WATCH:
       return { ...state, watchlater: action.payload };
+    case ACTION_TYPE.ADD_LIKED:
+      return { ...state, liked: action.payload };
+    case ACTION_TYPE.REMOVE_LIKED:
+      return { ...state, liked: action.payload };
     default:
       return state;
   }

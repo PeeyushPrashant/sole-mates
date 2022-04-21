@@ -1,5 +1,12 @@
 import "./App.css";
-import { Home, Login, SignUp, SingleVideo, WatchLater } from "../src/pages";
+import {
+  Home,
+  Login,
+  SignUp,
+  SingleVideo,
+  WatchLater,
+  Liked,
+} from "../src/pages";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,6 +18,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/video/:videoId" element={<SingleVideo />} />
         <Route path="/watchlater" element={<WatchLater />} />
+        <Route path="/liked" element={<Liked />} />
       </Routes>
     </div>
   );
