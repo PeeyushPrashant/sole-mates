@@ -1,5 +1,5 @@
 import { NavBar } from "../../components";
-import { useAuth } from "../../contexts/auth-context"
+import { useAuth } from "../../contexts"
 import {useNavigate} from "react-router-dom"
 import { useState } from "react";
 import "./Auth.css";

@@ -1,7 +1,7 @@
 
-import { NavBar,Aside } from "../../components";
-import { useData } from "../../contexts/data-context";
-import { VideoCard } from "../../components/VIdeoCard/VideoCard";
+import { NavBar,Aside,VideoCard } from "../../components";
+import { useData } from "../../contexts";
+
 
 export const Home=()=>{
     const {state}= useData();

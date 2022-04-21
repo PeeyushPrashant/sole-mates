@@ -25,7 +25,7 @@ const AuthProvider = ({ children }) => {
         navigate("/");
       }
     } catch (error) {
-      console.error();
+      console.error(error);
     }
   };
 
@@ -54,7 +54,7 @@ const AuthProvider = ({ children }) => {
         navigate("/");
       }
     } catch (error) {
-      console.error();
+      console.error(error);
     }
   };
 

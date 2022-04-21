@@ -1,4 +1,4 @@
-import { useAuth } from "../../contexts/auth-context";
+import { useAuth } from "../../contexts";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
 import { NavBar } from "../../components";
