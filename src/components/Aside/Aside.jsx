@@ -6,7 +6,7 @@ export const Aside=()=>{
         <aside className="sideBar flex-col"
         // {sideBar? "showSide flex-col": "sideBar flex-col"}
         >
-          <NavLink to="/notes"
+          <NavLink to="/"
         //   style={getActiveStyle}
           >
         <div className="aside-tab flex-row"
@@ -22,7 +22,7 @@ export const Aside=()=>{
         <div className="aside-tab flex-row"
         // onClick={sideBarHandler}
         >
-        <i class="fas fa-play-circle icon-md"></i>
+        <i className="fas fa-play-circle icon-md"></i>
             <p className="aside-subhead">Playlist</p>
         </div>
         </NavLink>
@@ -32,22 +32,22 @@ export const Aside=()=>{
         <div className="aside-tab flex-row"
         // onClick={sideBarHandler}
         >
-        <i class="fas fa-thumbs-up icon-md"></i>
+        <i className="fas fa-thumbs-up icon-md"></i>
             <p className="aside-subhead">Liked</p>
         </div>
         </NavLink>
-        <NavLink to="/trash"
+        <NavLink to="/watchlater"
         // style={getActiveStyle}
         >
         <div className="aside-tab flex-row">
-        <i class="far fa-clock icon-md"></i>
+        <i className="far fa-clock icon-md"></i>
             <p className="aside-subhead">Watch Later</p>
         </div>
         </NavLink>
         <NavLink to=""
         >
         <div className="aside-tab flex-row">
-        <i class="fas fa-history icon-md"></i>
+        <i className="fas fa-history icon-md"></i>
          <p className="aside-subhead">History</p>
         </div>
         </NavLink>

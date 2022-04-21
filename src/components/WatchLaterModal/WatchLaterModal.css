@@ -1,0 +1,21 @@
+.watch-modal {
+  background-color: var(--greyish-black);
+  position: absolute;
+  color: var(--text-color);
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
+  bottom: -1.7rem;
+  right: 1.8rem;
+}
+.watch-modal-option {
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+  gap: 0.6rem;
+  align-items: center;
+}
+.remove-watch {
+  color: var(--red);
+  gap: 0.6rem;
+  align-items: center;
+}

@@ -1,6 +1,7 @@
 .video-card {
   width: 33rem;
   height: auto;
+  position: relative;
   gap: 1rem;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -19,6 +20,9 @@
   width: 90%;
   font-weight: 900;
   text-align: left;
+}
+.ellipse {
+  cursor: pointer;
 }
 .video-card-footer {
   justify-content: space-between;

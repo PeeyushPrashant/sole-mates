@@ -4,11 +4,11 @@
   --white: white;
   --text-color: rgb(236, 227, 227);
   --card-shadow: #adb5bd;
-  --red: #cf000f;
   --black: black;
   --greyish-black: #34343d;
-  --light-black: #191921;
-  --orange: #f48c06;
+  --light-black: #000000;
+  --dark-orange: #e75a4b;
+  --red: rgb(228, 11, 11);
   --background-color: #141319;
   --primary-light: #0b77e4;
   --nav-box-shadow: #eee;
