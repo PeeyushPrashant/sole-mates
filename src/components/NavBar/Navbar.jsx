@@ -1,6 +1,6 @@
 import "./NavBar.css"
 import { useNavigate } from "react-router-dom"
-import { useAuth } from "../../contexts/auth-context";
+import {useAuth} from "../../contexts"
 
 export const NavBar=()=>{
   const {token,logOutHandler} = useAuth();

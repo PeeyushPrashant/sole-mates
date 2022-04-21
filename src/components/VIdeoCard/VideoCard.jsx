@@ -1,7 +1,7 @@
 import "./VideoCard.css";
 import {useState} from "react";
-import { useAuth } from "../../contexts/auth-context";
-import { useData } from "../../contexts/data-context";
+import { useAuth, useData } from "../../contexts";
+
 import {WatchLaterModal} from "../WatchLaterModal/WatchLaterModal"
 import { useNavigate } from "react-router-dom";
 import { WatchLaterHandler } from "../../utils/WatchLater";

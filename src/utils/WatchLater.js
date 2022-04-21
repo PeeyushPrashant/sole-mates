@@ -23,7 +23,7 @@ export const WatchLaterHandler = async (
       }
     }
   } catch (error) {
-    console.error();
+    console.error(error);
   }
 };
 

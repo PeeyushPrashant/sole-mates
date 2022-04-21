@@ -1,6 +1,6 @@
 
 import { NavBar,Aside,VideoCard } from "../../components";
-import { useData } from "../../contexts/data-context";
+import { useData } from "../../contexts";
 
 
 export const Home=()=>{

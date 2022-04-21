@@ -9,17 +9,17 @@ export const WatchLaterModal=({addToWatchlater,isInWatchLater})=>{
            >
             {isInWatchLater?
             <div className="remove-watch flex-row">
-            <i class="far fa-trash-alt"></i>
+            <i className="far fa-trash-alt"></i>
             <p>Remove From Watch Later</p>
             </div>:
             <>
-            <i class="far fa-clock"></i>
+            <i className="far fa-clock"></i>
            <p>Add to Watch Later</p>
             </>
              } 
            </div>
            <div className="watch-modal-option flex-row">
-           <i class="fas fa-play-circle"></i>
+           <i className="fas fa-play-circle"></i>
            <p>Add to Playlist</p>
            </div>
         </div>

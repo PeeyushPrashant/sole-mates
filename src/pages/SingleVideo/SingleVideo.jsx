@@ -1,6 +1,5 @@
 import { useParams } from "react-router-dom"
-import { useData } from "../../contexts/data-context"
-import { useAuth } from "../../contexts/auth-context";
+import { useData,useAuth } from "../../contexts"
 import { useNavigate } from "react-router-dom";
 import {NavBar,Aside} from "../../components"
 import { WatchLaterHandler } from "../../utils/WatchLater";
