@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useData,useAuth } from "../../contexts"
 import { useNavigate } from "react-router-dom";
 import {NavBar,Aside} from "../../components"
-import { WatchLaterHandler } from "../../utils/WatchLater";
+import { WatchLaterHandler,LikedHandler } from "../../utils";
 import "./SingleVideo.css"
 
 export const SingleVideo=()=>{
@@ -14,6 +14,7 @@ export const SingleVideo=()=>{
     const video= videoArray.find((item)=>item._id===videoId) || {};
     const {src,title,creator,description,_id}= video;
     const isInWatchLater= state.watchlater.some((ele)=>ele._id===_id);
+    const isInLiked= state.liked.some((ele)=>ele._id===_id);
     return(
         <>
         <NavBar/>
@@ -35,9 +36,11 @@ export const SingleVideo=()=>{
                   <p>{creator}</p>
                 </section>
                 <section className="chip-container flex-row">
-                    <div className="chip flex-row">
+                    <div className={isInLiked?"chip-active flex-row": "chip flex-row"}
+                    onClick={!token?()=>navigate("/login"):()=>LikedHandler(video,token,dispatch,isInLiked)}
+                    >
                     <i class="far fa-thumbs-up"></i>
-                     <p>Like</p>
+                     <p>{isInLiked?"Liked": "Like"}</p>
                     </div>
                     <div className={isInWatchLater?"chip-active flex-row": "chip flex-row"}
                     onClick={!token?()=>navigate("/login"):()=>WatchLaterHandler(video,token,dispatch,isInWatchLater)}

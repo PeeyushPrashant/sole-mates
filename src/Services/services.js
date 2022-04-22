@@ -26,10 +26,30 @@ const removeWatchLaterServices = async (id, token) =>
     },
   });
 
+const likedServices = async (video, token) =>
+  await axios.post(
+    "/api/user/likes",
+    { video },
+    {
+      headers: {
+        authorization: token,
+      },
+    }
+  );
+
+const removeLikedServices = async (id, token) =>
+  await axios.delete(`/api/user/likes/${id}`, {
+    headers: {
+      authorization: token,
+    },
+  });
+
 export {
   getAllVideos,
   signUpServices,
   loginServices,
   watchLaterServices,
   removeWatchLaterServices,
+  likedServices,
+  removeLikedServices,
 };

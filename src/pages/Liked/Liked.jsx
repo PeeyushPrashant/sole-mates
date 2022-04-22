@@ -1,17 +1,17 @@
-import {NavBar,Aside,VideoCard} from "../../components"
+import { NavBar,Aside,VideoCard } from "../../components";
 import { useData } from "../../contexts";
 
 
-export const WatchLater=()=>{
+export const Liked=()=>{
     const {state}= useData();
-    const watchLaterArray=state.watchlater;
+    const likedArray=state.liked;
     return(
         <>
         <NavBar/>
         <main className="main-cont flex-row">
             <Aside/>
             <div className="right-main">
-              {watchLaterArray.map((item)=>{
+              {likedArray.map((item)=>{
                 return(
                 <VideoCard
                 key={item._id}
