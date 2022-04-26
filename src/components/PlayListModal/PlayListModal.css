@@ -1,0 +1,45 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--backdrop);
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+.playlist-modal {
+  width: 30rem;
+  border-radius: 0.5rem;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  z-index: 6;
+  background-color: var(--background-color);
+}
+.playlist-name {
+  background-color: var(--grey);
+  border: none;
+  color: var(--text-color);
+  border-radius: 0.3rem;
+}
+.h4-tag {
+  margin: 0;
+}
+.cross-icon {
+  cursor: pointer;
+}
+.playlist {
+  gap: 1rem;
+}
+.playlist-input {
+  gap: 2rem;
+}
+.create-playlist-btn {
+  height: 2.5rem;
+  border-radius: 0.2rem;
+  background-color: var(--dark-orange);
+  width: 100%;
+  margin-top: 1rem;
+}

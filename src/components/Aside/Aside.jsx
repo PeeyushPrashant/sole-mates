@@ -16,7 +16,7 @@ export const Aside=()=>{
             <p className="aside-subhead">Home</p>
         </div>
         </NavLink>
-        <NavLink to="/labels"
+        <NavLink to="/playlist"
         // style={getActiveStyle}
         >
         <div className="aside-tab flex-row"

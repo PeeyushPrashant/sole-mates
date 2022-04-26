@@ -44,6 +44,47 @@ const removeLikedServices = async (id, token) =>
     },
   });
 
+const createNewPlaylistServices = async (name, token) =>
+  await axios.post(
+    "/api/user/playlists",
+    {
+      playlist: {
+        title: name,
+        description: "",
+      },
+    },
+    {
+      headers: {
+        authorization: token,
+      },
+    }
+  );
+
+const addVideoToPlaylistServices = async (id, video, token) =>
+  await axios.post(
+    `/api/user/playlists/${id}`,
+    { video },
+    {
+      headers: {
+        authorization: token,
+      },
+    }
+  );
+
+const removePlayListServices = async (id, token) =>
+  await axios.delete(`/api/user/playlists/${id}`, {
+    headers: {
+      authorization: token,
+    },
+  });
+
+const removeVideoFromPlayListServices = async (playlistId, videoId, token) =>
+  await axios.delete(`/api/user/playlists/${playlistId}/${videoId}`, {
+    headers: {
+      authorization: token,
+    },
+  });
+
 export {
   getAllVideos,
   signUpServices,
@@ -52,4 +93,8 @@ export {
   removeWatchLaterServices,
   likedServices,
   removeLikedServices,
+  createNewPlaylistServices,
+  addVideoToPlaylistServices,
+  removePlayListServices,
+  removeVideoFromPlayListServices,
 };
