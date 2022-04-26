@@ -1,11 +1,13 @@
 import { useParams } from "react-router-dom"
 import { useData,useAuth } from "../../contexts"
 import { useNavigate } from "react-router-dom";
-import {NavBar,Aside} from "../../components"
+import {NavBar,Aside,PlayListModal} from "../../components"
 import { WatchLaterHandler,LikedHandler } from "../../utils";
 import "./SingleVideo.css"
+import { useState } from "react";
 
 export const SingleVideo=()=>{
+    const [playListModal,setPlaylistModal]=useState(false);
     const {state,dispatch}= useData();
     const {token} = useAuth();
     const navigate= useNavigate();
@@ -15,6 +17,13 @@ export const SingleVideo=()=>{
     const {src,title,creator,description,_id}= video;
     const isInWatchLater= state.watchlater.some((ele)=>ele._id===_id);
     const isInLiked= state.liked.some((ele)=>ele._id===_id);
+    const openPlayListModal=()=>{
+        setPlaylistModal(true);
+      }
+    const closePlayListModal=()=>{
+        setPlaylistModal(false);
+    }
+
     return(
         <>
         <NavBar/>
@@ -52,7 +61,9 @@ export const SingleVideo=()=>{
                     <i class="far fa-copy"></i>
                     <p>Copy</p>
                     </div>
-                    <div className="chip flex-row">
+                    <div className="chip flex-row"
+                    onClick={!token?()=>navigate("/login"):openPlayListModal}
+                    >
                     <i class="far fa-play-circle"></i>
                     <p>Save</p>
                     </div>
@@ -61,8 +72,12 @@ export const SingleVideo=()=>{
                    <h4>Description :</h4>
                    <p>{description}</p>
                 </footer>
+                {playListModal && <PlayListModal
+               item={video}
+              closePlayListModal={closePlayListModal}
+          />}
               </div>
-           
+             
         </main>
         </>
     )
