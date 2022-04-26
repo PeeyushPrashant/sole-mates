@@ -3,6 +3,7 @@ import {useState} from "react";
 import { useAuth, useData } from "../../contexts";
 
 import {WatchLaterModal} from "../WatchLaterModal/WatchLaterModal"
+import { PlayListModal } from "../PlayListModal/PlayListModal";
 import { useNavigate } from "react-router-dom";
 import { WatchLaterHandler } from "../../utils";
 
@@ -12,9 +13,17 @@ export const VideoCard=({item})=>{
     const {token}= useAuth();
     const {state,dispatch}= useData();
     const [modal,setModal]= useState(false);
+    const [playListModal, setPlaylistModal] = useState(false);
     const isInWatchLater=state.watchlater.some((ele)=>ele._id ===_id)
     const modalHandler=()=>{
       setModal((curr)=>!curr)
+    }
+    const openPlayListModal=()=>{
+      setModal(false);
+      setPlaylistModal(true);
+    }
+    const closePlayListModal=()=>{
+      setPlaylistModal(false);
     }
     return (
       <>
@@ -44,10 +53,14 @@ export const VideoCard=({item})=>{
         </footer>
         {modal && <WatchLaterModal 
         isInWatchLater={isInWatchLater}
+        openPlayListModal={openPlayListModal}
         addToWatchlater={!token?()=>navigate("/login"):()=>WatchLaterHandler(item,token,dispatch,isInWatchLater)}
         />}
+        {playListModal && <PlayListModal
+        item={item}
+      closePlayListModal={closePlayListModal}
+      />}
       </div>
-      
       </>
     )
 }

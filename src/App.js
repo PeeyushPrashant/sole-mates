@@ -6,6 +6,8 @@ import {
   SingleVideo,
   WatchLater,
   Liked,
+  PlayList,
+  PlayListVideos,
 } from "../src/pages";
 import { Routes, Route } from "react-router-dom";
 
@@ -19,6 +21,8 @@ function App() {
         <Route path="/video/:videoId" element={<SingleVideo />} />
         <Route path="/watchlater" element={<WatchLater />} />
         <Route path="/liked" element={<Liked />} />
+        <Route path="/playlist" element={<PlayList />} />
+        <Route path="/playlist/:playlistId" element={<PlayListVideos />} />
       </Routes>
     </div>
   );
