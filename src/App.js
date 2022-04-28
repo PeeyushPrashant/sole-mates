@@ -8,6 +8,7 @@ import {
   Liked,
   PlayList,
   PlayListVideos,
+  History,
 } from "../src/pages";
 import { Routes, Route } from "react-router-dom";
 
@@ -23,6 +24,7 @@ function App() {
         <Route path="/liked" element={<Liked />} />
         <Route path="/playlist" element={<PlayList />} />
         <Route path="/playlist/:playlistId" element={<PlayListVideos />} />
+        <Route path="/history" element={<History />} />
       </Routes>
     </div>
   );

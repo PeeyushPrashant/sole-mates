@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { PlaylistHandler,addVideoToPlayList } from "../../utils";
+import { PlaylistHandler,addVideoToPlayList,removeVideoFromPlayList } from "../../utils";
 import { useAuth,useData } from "../../contexts";
 import "./PlayListModal.css";
 
@@ -25,7 +25,8 @@ export const PlayListModal=({closePlayListModal,item})=>{
                              <input type="checkbox" 
                              checked={isInPlayList}
                              onChange={(e)=>e.target.checked?
-                             addVideoToPlayList(ele._id,item,token,dispatch):""
+                             addVideoToPlayList(ele._id,item,token,dispatch):
+                             removeVideoFromPlayList(ele._id,item._id,token,dispatch)
                              }
                              />
                              <p>{ele.title}</p>

@@ -2,7 +2,7 @@ import "../PlayList.css";
 import { useNavigate } from "react-router-dom";
 import { useData,useAuth } from "../../../contexts";
 import { useState } from "react";
-import {removeVideoFromPlayList} from "../../../utils"
+import {removeVideoFromPlayList,HistoryHandler} from "../../../utils"
 
 export const PlayListCard=({item,playListId})=>{
     const navigate= useNavigate();
@@ -16,7 +16,10 @@ export const PlayListCard=({item,playListId})=>{
     return(
         <div className="card video-card">
         <section
-        onClick={()=>navigate(`/video/${_id}`)}
+        onClick={()=>{
+          navigate(`/video/${_id}`)
+          HistoryHandler(item,token,dispatch)
+        }}
         >
           <img
             src={image}
@@ -38,7 +41,7 @@ export const PlayListCard=({item,playListId})=>{
             <small>{date}</small>
           </p>
         </footer>
-        {modal && <div className="remove-watch flex-row"
+        {modal && <div className="remove-playlist flex-row"
         onClick={()=>removeVideoFromPlayList(playListId,_id,token,dispatch)}
         >
             <i className="far fa-trash-alt"></i>
