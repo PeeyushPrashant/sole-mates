@@ -85,6 +85,24 @@ const removeVideoFromPlayListServices = async (playlistId, videoId, token) =>
     },
   });
 
+const addToHistoryServices = async (video, token) =>
+  await axios.post(
+    "/api/user/history",
+    { video },
+    {
+      headers: {
+        authorization: token,
+      },
+    }
+  );
+
+const removeFromHistoryServices = async (videoId, token) =>
+  await axios.delete(`/api/user/history/${videoId}`, {
+    headers: {
+      authorization: token,
+    },
+  });
+
 export {
   getAllVideos,
   signUpServices,
@@ -97,4 +115,6 @@ export {
   addVideoToPlaylistServices,
   removePlayListServices,
   removeVideoFromPlayListServices,
+  addToHistoryServices,
+  removeFromHistoryServices,
 };

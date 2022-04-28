@@ -5,6 +5,7 @@ const InitialValue = {
   watchlater: [],
   liked: [],
   playlists: [],
+  history: [],
 };
 
 const DataReducer = (state, action) => {
@@ -28,6 +29,8 @@ const DataReducer = (state, action) => {
           list._id === action.payload._id ? action.payload : list
         ),
       };
+    case ACTION_TYPE.ADD_HISTORY:
+      return { ...state, history: action.payload };
     default:
       return state;
   }

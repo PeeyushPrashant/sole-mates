@@ -5,7 +5,7 @@ import { useAuth, useData } from "../../contexts";
 import {WatchLaterModal} from "../WatchLaterModal/WatchLaterModal"
 import { PlayListModal } from "../PlayListModal/PlayListModal";
 import { useNavigate } from "react-router-dom";
-import { WatchLaterHandler } from "../../utils";
+import { WatchLaterHandler,HistoryHandler } from "../../utils";
 
 export const VideoCard=({item})=>{
     const {image,title,creator,date,_id}=item || {};
@@ -29,7 +29,10 @@ export const VideoCard=({item})=>{
       <>
       <div className="card video-card">
         <section
-        onClick={()=>navigate(`/video/${_id}`)}
+        onClick={()=>{
+          navigate(`/video/${_id}`)
+          HistoryHandler(item,token,dispatch)
+        }}
         >
           <img
             src={image}

@@ -44,7 +44,7 @@ export const Aside=()=>{
             <p className="aside-subhead">Watch Later</p>
         </div>
         </NavLink>
-        <NavLink to=""
+        <NavLink to="/history"
         >
         <div className="aside-tab flex-row">
         <i className="fas fa-history icon-md"></i>

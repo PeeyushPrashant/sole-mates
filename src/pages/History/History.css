@@ -1,0 +1,13 @@
+.history-modal {
+  background-color: var(--greyish-black);
+  position: absolute;
+  color: var(--text-color);
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
+  bottom: -5rem;
+  right: 1.8rem;
+}
+.remove-history {
+  color: var(--red);
+}
