@@ -67,12 +67,12 @@
 }
 
 @media screen and (max-width: 1500px) {
-  .video-card {
+  .playlist-card {
     width: 29rem;
   }
 }
-@media screen and (max-width: 450px) {
-  .video-card {
-    width: 97%;
+@media screen and (max-width: 500px) {
+  .playlist-card {
+    width: 95%;
   }
 }

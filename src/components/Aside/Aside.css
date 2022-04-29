@@ -25,21 +25,35 @@
 }
 
 @media screen and (max-width: 900px) {
+  .showSide {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    background-color: var(--background-color);
+    width: 25rem;
+    height: 100%;
+  }
+
   .sideBar {
+    display: none;
+  }
+  .show-backdrop {
+    position: fixed;
+    /* top: 7.2rem; */
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backdrop);
+    z-index: 5;
+  }
+  .hide-backdrop {
     display: none;
   }
 }
 
-/* @media screen and (max-width: 750px) {
-    .showSide {
-      position: absolute;
-      z-index: 10;
-      background-color: var(--background-color);
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    .sideBar {
-      display: none;
-    }
+@media screen and (max-width: 500px) {
+  /* .show-backdrop {
+    top: 11.8rem;
   } */
+}
