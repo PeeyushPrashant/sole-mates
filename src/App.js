@@ -11,10 +11,12 @@ import {
   History,
 } from "../src/pages";
 import { Routes, Route } from "react-router-dom";
+import { useTheme } from "./contexts";
 
 function App() {
+  const { theme } = useTheme();
   return (
-    <div className="App">
+    <div className="App" data-theme={theme}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

@@ -1,10 +1,11 @@
 import "./NavBar.css"
 import { useNavigate } from "react-router-dom"
-import {useAuth,useData} from "../../contexts"
+import {useAuth,useData,useTheme} from "../../contexts"
 
 export const NavBar=()=>{
   const {token,logOutHandler} = useAuth();
   const {sideBarHandler}= useData();
+  const {theme,changeTheme} = useTheme();
   const navigate=useNavigate();
     return (
         <>
@@ -40,9 +41,9 @@ export const NavBar=()=>{
         
         
           <div className="saved-item flex-row"
-        //   onClick={changeTheme}
+          onClick={changeTheme}
           >
-           <i className="bi bi-brightness-high nav-icon"></i>
+           {theme==="dark"?<i className="bi bi-brightness-high nav-icon"></i>:<i className="bi bi-moon-fill nav-icon"></i>}
           </div>
           <div className="saved-item flex-row"
           onClick={sideBarHandler}

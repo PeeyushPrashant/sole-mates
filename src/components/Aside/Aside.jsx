@@ -1,11 +1,12 @@
 import "./Aside.css"
 import { NavLink } from "react-router-dom"
-import { useData } from "../../contexts"
+import { useData,useTheme } from "../../contexts"
 
 export const Aside=()=>{
   const {sideBar, sideBarHandler}= useData();
+  const {theme} = useTheme();
   const getActiveStyle=({isActive})=>({
-    backgroundColor: isActive?"#34343d":""
+    backgroundColor: isActive?theme==="dark"?"#34343d":"#cecece":""
   })
     return (
       
