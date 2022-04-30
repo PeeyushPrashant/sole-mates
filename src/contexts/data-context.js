@@ -1,4 +1,10 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from "react";
 import { ACTION_TYPE } from "../utils/ActionType";
 import { InitialValue, DataReducer } from "../reducer/DataReducer";
 import { getAllVideos } from "../Services/services";
@@ -16,8 +22,12 @@ const DataProvider = ({ children }) => {
         });
     })();
   }, []);
+  const [sideBar, setSideBar] = useState(false);
+  const sideBarHandler = () => {
+    setSideBar((curr) => !curr);
+  };
   return (
-    <DataContext.Provider value={{ state, dispatch }}>
+    <DataContext.Provider value={{ state, dispatch, sideBar, sideBarHandler }}>
       {children}
     </DataContext.Provider>
   );

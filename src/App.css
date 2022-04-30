@@ -6,7 +6,7 @@
   --card-shadow: #adb5bd;
   --black: black;
   --backdrop: rgba(63, 61, 70, 0.7);
-  --greyish-black: #34343d;
+  --greyish-black: #191921;
   --light-black: #000000;
   --dark-orange: #e75a4b;
   --red: rgb(228, 11, 11);
@@ -50,7 +50,7 @@
     grid-template-columns: 1fr;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .right-main {
     margin: 0;
     padding: 3rem 1rem;

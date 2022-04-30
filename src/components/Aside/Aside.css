@@ -4,7 +4,7 @@
   left: 0;
   height: 100vh;
   gap: 0.5rem;
-  background-color: var(--light-black);
+  background-color: var(--greyish-black);
   padding-top: 2rem;
 }
 .aside-tab {
@@ -23,23 +23,30 @@
 .aside-subhead {
   font-size: 1.6rem;
 }
+.showSide {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  background-color: var(--greyish-black);
+  width: 25rem;
+  height: 100vh;
+}
 
 @media screen and (max-width: 900px) {
   .sideBar {
     display: none;
   }
+  .show-backdrop {
+    position: fixed;
+    top: 7.2rem;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--backdrop);
+    z-index: 5;
+  }
+  .hide-backdrop {
+    display: none;
+  }
 }
-
-/* @media screen and (max-width: 750px) {
-    .showSide {
-      position: absolute;
-      z-index: 10;
-      background-color: var(--background-color);
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-    .sideBar {
-      display: none;
-    }
-  } */
