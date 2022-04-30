@@ -4,13 +4,16 @@ import { useData } from "../../contexts"
 
 export const Aside=()=>{
   const {sideBar, sideBarHandler}= useData();
+  const getActiveStyle=({isActive})=>({
+    backgroundColor: isActive?"#34343d":""
+  })
     return (
       
       <div className={sideBar? "show-backdrop": "hide-backdrop"}>
         <aside className={sideBar? "showSide  flex-col": "sideBar flex-col"}
         >
           <NavLink to="/"
-        //   style={getActiveStyle}
+          style={getActiveStyle}
           >
         <div className="aside-tab flex-row"
         onClick={sideBarHandler}
@@ -20,7 +23,7 @@ export const Aside=()=>{
         </div>
         </NavLink>
         <NavLink to="/playlist"
-        // style={getActiveStyle}
+        style={getActiveStyle}
         >
         <div className="aside-tab flex-row"
         onClick={sideBarHandler}
@@ -30,7 +33,7 @@ export const Aside=()=>{
         </div>
         </NavLink>
         <NavLink to="/liked"
-        // style={getActiveStyle}
+        style={getActiveStyle}
         >
         <div className="aside-tab flex-row"
         onClick={sideBarHandler}
@@ -40,7 +43,7 @@ export const Aside=()=>{
         </div>
         </NavLink>
         <NavLink to="/watchlater"
-        // style={getActiveStyle}
+        style={getActiveStyle}
         >
         <div className="aside-tab flex-row"
         onClick={sideBarHandler}
@@ -50,6 +53,7 @@ export const Aside=()=>{
         </div>
         </NavLink>
         <NavLink to="/history"
+        style={getActiveStyle}
         >
         <div className="aside-tab flex-row"
         onClick={sideBarHandler}

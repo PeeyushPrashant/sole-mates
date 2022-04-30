@@ -4,7 +4,7 @@
   left: 0;
   height: 100vh;
   gap: 0.5rem;
-  background-color: var(--light-black);
+  background-color: var(--greyish-black);
   padding-top: 2rem;
 }
 .aside-tab {
@@ -23,25 +23,24 @@
 .aside-subhead {
   font-size: 1.6rem;
 }
+.showSide {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  background-color: var(--greyish-black);
+  width: 25rem;
+  height: 100vh;
+}
 
 @media screen and (max-width: 900px) {
-  .showSide {
-    position: absolute;
-    z-index: 10;
-    left: 0;
-    gap: 0.5rem;
-    padding-top: 2rem;
-    background-color: var(--background-color);
-    width: 25rem;
-    height: 100%;
-  }
-
   .sideBar {
     display: none;
   }
   .show-backdrop {
     position: fixed;
-    /* top: 7.2rem; */
+    top: 7.2rem;
     width: 100vw;
     height: 100vh;
     background-color: var(--backdrop);
@@ -50,10 +49,4 @@
   .hide-backdrop {
     display: none;
   }
-}
-
-@media screen and (max-width: 500px) {
-  /* .show-backdrop {
-    top: 11.8rem;
-  } */
 }
