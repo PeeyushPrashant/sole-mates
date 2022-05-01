@@ -4,18 +4,20 @@ import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
-import { DataProvider, AuthProvider } from "./contexts";
+import { DataProvider, AuthProvider, ThemeProvider } from "./contexts";
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <DataProvider>
-          <App />
-        </DataProvider>
-      </AuthProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <DataProvider>
+            <App />
+          </DataProvider>
+        </AuthProvider>
+      </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

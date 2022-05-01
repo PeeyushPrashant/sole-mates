@@ -16,6 +16,15 @@
   --sidebar-active: #262f44;
 }
 
+[data-theme="light"] {
+  --white: black;
+  --text-color: rgb(34, 33, 33);
+  --card-shadow: rgb(48, 39, 39);
+  --background-color: #eaeaea;
+  --grey: #cecece;
+  --greyish-black: #dbdbdb;
+}
+
 .App {
   background-color: var(--background-color);
   min-height: 100vh;

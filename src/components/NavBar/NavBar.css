@@ -67,10 +67,7 @@
   color: var(--white);
   margin-right: 1.2rem;
   font-size: 2.5rem;
-}
-.nav-icon:hover {
   cursor: pointer;
-  color: var(--primary-light);
 }
 .hamburger {
   display: none;
