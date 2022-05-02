@@ -7,3 +7,4 @@ export { Liked } from "./Liked/Liked";
 export { PlayList } from "./PlayList/PlayList";
 export { PlayListVideos } from "./PlayList/components/PlayListVideos";
 export { History } from "./History/History";
+export { ProfilePage } from "./ProfilePage/ProfilePage";
