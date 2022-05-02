@@ -26,7 +26,7 @@ export const Home=()=>{
                             <div className={isActive?"chip-active flex-row":"chip flex-row"}
                             onClick={()=>sortHandler(categoryName)}
                             >
-                                <p>{categoryName}</p>
+                                <p className="category-name">{categoryName}</p>
                             </div>
                         )
                     })}
