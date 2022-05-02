@@ -11,6 +11,7 @@ export const PlayList=()=>{
         <main className="main-cont flex-row">
             <Aside/>
             <div className="right-main">
+            <section className="videos-container">
               {playListArray.map((item)=>{
                 return(
                 <PlayListFolder
@@ -19,6 +20,7 @@ export const PlayList=()=>{
                 />
                 )
               })}
+              </section>
             </div>
         </main>
         </>

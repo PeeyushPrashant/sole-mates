@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+.category-list {
+  align-items: center;
+  gap: 2rem;
+  color: var(--text-color);
+  width: 100%;
+  flex-wrap: wrap;
+}
+.category-name {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.6rem;
+}

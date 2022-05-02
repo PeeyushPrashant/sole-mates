@@ -32,12 +32,12 @@ export const SingleVideo=()=>{
               <div className="single-video-cont flex-col">
                  <iframe 
                  src={src} 
-                 width='100%'
-                height='70%'
+                width='100%'
                 title='YouTube video player'
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen=''
+                className="iframe-height"
                  ></iframe>
 
                 <section className="title-cont flex-col">
@@ -49,28 +49,28 @@ export const SingleVideo=()=>{
                     onClick={!token?()=>navigate("/login"):()=>LikedHandler(video,token,dispatch,isInLiked)}
                     >
                     <i class="far fa-thumbs-up"></i>
-                     <p>{isInLiked?"Liked": "Like"}</p>
+                     <p className="chip-text">{isInLiked?"Liked": "Like"}</p>
                     </div>
                     <div className={isInWatchLater?"chip-active flex-row": "chip flex-row"}
                     onClick={!token?()=>navigate("/login"):()=>WatchLaterHandler(video,token,dispatch,isInWatchLater)}
                     >
                     <i class="far fa-clock"></i>
-                    <p>Watch Later</p>
+                    <p className="chip-text">Watch Later</p>
                     </div>
                     <div className="chip flex-row">
                     <i class="far fa-copy"></i>
-                    <p>Copy</p>
+                    <p className="chip-text">Copy</p>
                     </div>
                     <div className="chip flex-row"
                     onClick={!token?()=>navigate("/login"):openPlayListModal}
                     >
                     <i class="far fa-play-circle"></i>
-                    <p>Save</p>
+                    <p className="chip-text">Save</p>
                     </div>
                 </section>
                 <footer className="vid-description flex-col">
                    <h4>Description :</h4>
-                   <p>{description}</p>
+                   <p className="chip-text">{description}</p>
                 </footer>
                 {playListModal && <PlayListModal
                item={video}

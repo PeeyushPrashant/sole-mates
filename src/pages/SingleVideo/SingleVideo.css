@@ -1,8 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
 .single-video-cont {
   padding: 3rem 5rem 3rem 0;
   margin-left: 32rem;
   gap: 2rem;
   color: var(--text-color);
+  width: 100vw;
+}
+.iframe-height {
+  height: 70%;
 }
 .vid-title {
   margin: 0;
@@ -22,7 +28,11 @@
   align-items: center;
   padding: 0.6rem 1.5rem;
   cursor: pointer;
-  background-color: var(--greyish-black);
+  background-color: var(--grey);
+}
+.chip-text {
+  font-family: "Kanit", sans-serif;
+  font-size: 1.6rem;
 }
 .chip-active {
   gap: 0.7rem;
@@ -45,6 +55,9 @@
 @media screen and (max-width: 500px) {
   .single-video-cont {
     margin: 0;
-    padding: 3rem;
+    padding: 3rem 1rem;
+  }
+  .iframe-height {
+    height: 40%;
   }
 }

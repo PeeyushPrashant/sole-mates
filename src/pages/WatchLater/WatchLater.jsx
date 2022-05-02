@@ -11,6 +11,7 @@ export const WatchLater=()=>{
         <main className="main-cont flex-row">
             <Aside/>
             <div className="right-main">
+            <section className="videos-container">
               {watchLaterArray.map((item)=>{
                 return(
                 <VideoCard
@@ -19,6 +20,7 @@ export const WatchLater=()=>{
                 />
                 )
               })}
+              </section>
             </div>
         </main>
         </>

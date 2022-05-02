@@ -12,6 +12,7 @@ export const History=()=>{
         <main className="main-cont flex-row">
             <Aside/>
             <div className="right-main">
+            <section className="videos-container">
               {historyArray.map((item)=>{
                   return (
                      <HistoryCard
@@ -20,6 +21,7 @@ export const History=()=>{
                      />
                   )
               })}
+              </section>
             </div>
         </main>
         </>
