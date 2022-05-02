@@ -1,7 +1,9 @@
 .profile-card {
   width: 35rem;
   gap: 2rem;
-  height: auto;
+  height: max-content;
+  position: absolute;
+  top: 20rem;
   padding: 0 1rem 1rem;
   background-color: var(--background-color);
   color: var(--text-color);
@@ -13,7 +15,7 @@
   font-size: 1.6rem;
   font-weight: 700;
   padding: 0.7rem 0;
-  border-bottom: 2px solid var(--red);
+  border-bottom: 2px solid var(--dark-orange);
   cursor: pointer;
 }
 .profile-card-headings {
@@ -32,6 +34,12 @@
 .logout-btn {
   background-color: var(--background-color);
   color: var(--text-color);
-  box-shadow: 0 0 0.6rem var(--red);
+  box-shadow: 0 0 0.6rem var(--dark-orange);
   font-weight: 600;
+}
+
+@media screen and (max-width: 450px) {
+  .profile-card {
+    width: 28rem;
+  }
 }

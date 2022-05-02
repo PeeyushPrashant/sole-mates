@@ -9,7 +9,7 @@ export const ProfilePage=()=>{
        <NavBar/>
        <main className="main-cont flex-row">
          <Aside/>
-         <div className="right-main flex-row">
+         <div className="right-main  flex-row">
          <div className="card profile-card">
                <header className="flex-row">
                    <div className="header-tab">Profile</div>
