@@ -2,6 +2,8 @@ import axios from "axios";
 
 const getAllVideos = async () => await axios.get("/api/videos");
 
+const getAllCategories = async () => await axios.get("/api/categories");
+
 const signUpServices = async (email, password, name) =>
   await axios.post("/api/auth/signup", { email, password, name });
 
@@ -103,8 +105,24 @@ const removeFromHistoryServices = async (videoId, token) =>
     },
   });
 
+const sortVideosBySearch = (videos, search) => {
+  return search
+    ? videos.filter((item) =>
+        item.title.toLowerCase().includes(search.toLowerCase())
+      )
+    : videos;
+};
+
+const sortVideosCategory = (videos, sortBy) => {
+  if (sortBy && sortBy !== "All")
+    return videos.filter((item) => item.category === sortBy.toLowerCase());
+
+  return videos;
+};
+
 export {
   getAllVideos,
+  getAllCategories,
   signUpServices,
   loginServices,
   watchLaterServices,
@@ -117,4 +135,6 @@ export {
   removeVideoFromPlayListServices,
   addToHistoryServices,
   removeFromHistoryServices,
+  sortVideosCategory,
+  sortVideosBySearch,
 };

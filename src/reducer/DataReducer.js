@@ -2,16 +2,39 @@ import { ACTION_TYPE } from "../utils/ActionType";
 
 const InitialValue = {
   videos: [],
+  categories: [],
   watchlater: [],
   liked: [],
   playlists: [],
   history: [],
+  sortBy: "",
+  search: "",
 };
 
 const DataReducer = (state, action) => {
   switch (action.type) {
     case ACTION_TYPE.INITIAL_DATA:
       return { ...state, videos: action.payload };
+    case ACTION_TYPE.CATEGORY:
+      return {
+        ...state,
+        categories: action.payload.map((cat) => ({
+          ...cat,
+          isActive: cat.categoryName === "All" ? true : false,
+        })),
+      };
+    case ACTION_TYPE.SORT_BY:
+      return {
+        ...state,
+        sortBy: action.payload,
+        categories: state.categories.map((cat) =>
+          cat.categoryName === action.payload
+            ? { ...cat, isActive: true }
+            : { ...cat, isActive: false }
+        ),
+      };
+    case ACTION_TYPE.SEARCH:
+      return { ...state, search: action.payload };
     case ACTION_TYPE.ADD_WATCH:
       return { ...state, watchlater: action.payload };
     case ACTION_TYPE.REMOVE_WATCH:

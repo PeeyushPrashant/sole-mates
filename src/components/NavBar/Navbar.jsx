@@ -1,10 +1,11 @@
 import "./NavBar.css"
 import { useNavigate } from "react-router-dom"
 import {useAuth,useData,useTheme} from "../../contexts"
+import { ACTION_TYPE } from "../../utils/ActionType"
 
 export const NavBar=()=>{
   const {token,logOutHandler} = useAuth();
-  const {sideBarHandler}= useData();
+  const {sideBarHandler,dispatch}= useData();
   const {theme,changeTheme} = useTheme();
   const navigate=useNavigate();
     return (
@@ -18,11 +19,11 @@ export const NavBar=()=>{
           <div className="nav-search flex-row">
           <i className="fas fa-search search-icon"></i>
           <input type="text" className="nav-input" placeholder="Search for videos"
-        //   onKeyDown={(e)=>{
-        //     if(e.key === 'Enter' || e.target.value === ''){
-        //       filterDispatch({type:"FILTER", payload:["search",e.target.value]})
-        //     }
-        //   }}
+          onKeyDown={(e)=>{
+            if(e.key === 'Enter' || e.target.value === ''){
+               dispatch({type:ACTION_TYPE.SEARCH, payload:e.target.value})
+            }
+          }}
           />
          
         </div>
@@ -56,11 +57,11 @@ export const NavBar=()=>{
        <div className="mobile-nav-search ">
           <i className="fas fa-search search-icon"></i>
           <input type="text" className="nav-input" placeholder="Search for videos"
-          // onKeyDown={(e)=>{
-          //   if(e.key === 'Enter' || e.target.value === ''){
-          //     filterDispatch({type:"FILTER", payload:["search",e.target.value]})
-          //   }
-          // }}
+          onKeyDown={(e)=>{
+            if(e.key === 'Enter' || e.target.value === ''){
+               dispatch({type:ACTION_TYPE.SEARCH, payload:e.target.value})
+            }
+          }}
           />
           
         </div>

@@ -11,6 +11,7 @@ export const Liked=()=>{
         <main className="main-cont flex-row">
             <Aside/>
             <div className="right-main">
+            <section className="videos-container">
               {likedArray.map((item)=>{
                 return(
                 <VideoCard
@@ -19,6 +20,7 @@ export const Liked=()=>{
                 />
                 )
               })}
+              </section>
             </div>
         </main>
         </>

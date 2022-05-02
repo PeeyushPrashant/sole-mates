@@ -32,12 +32,13 @@ export const SingleVideo=()=>{
               <div className="single-video-cont flex-col">
                  <iframe 
                  src={src} 
-                 width='100%'
-                height='70%'
+                width='100%'
+                // height='70%'
                 title='YouTube video player'
                 frameBorder='0'
                 allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                 allowFullScreen=''
+                className="iframe-height"
                  ></iframe>
 
                 <section className="title-cont flex-col">

@@ -7,7 +7,7 @@ import {
 } from "react";
 import { ACTION_TYPE } from "../utils/ActionType";
 import { InitialValue, DataReducer } from "../reducer/DataReducer";
-import { getAllVideos } from "../Services/services";
+import { getAllVideos, getAllCategories } from "../Services/services";
 const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
@@ -22,6 +22,18 @@ const DataProvider = ({ children }) => {
         });
     })();
   }, []);
+
+  useEffect(() => {
+    (async () => {
+      const response = await getAllCategories();
+      if (response.status === 200 || response.status === 201)
+        dispatch({
+          type: ACTION_TYPE.CATEGORY,
+          payload: response.data.categories,
+        });
+    })();
+  }, []);
+
   const [sideBar, setSideBar] = useState(false);
   const sideBarHandler = () => {
     setSideBar((curr) => !curr);
