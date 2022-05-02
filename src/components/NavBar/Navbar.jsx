@@ -34,7 +34,7 @@ export const NavBar=()=>{
         <i className="fas fa-sign-in-alt  nav-icon"></i>
         </div>:
         <div className="saved-item flex-row"
-        onClick={logOutHandler}
+        onClick={()=>navigate("/user_profile")}
         >
         <i className="fas fa-user-circle nav-icon"></i>
         </div>
