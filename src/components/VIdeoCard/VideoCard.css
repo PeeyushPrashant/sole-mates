@@ -1,6 +1,6 @@
 .video-card {
   width: 33rem;
-  height: auto;
+  height: max-content;
   position: relative;
   gap: 1rem;
   background-color: var(--background-color);
