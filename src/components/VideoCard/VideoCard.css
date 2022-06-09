@@ -1,0 +1,45 @@
+.video-card {
+  width: 33rem;
+  height: max-content;
+  position: relative;
+  gap: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  box-shadow: 0 0 0.6rem var(--card-shadow);
+}
+.thumbnail {
+  height: 16rem;
+  cursor: pointer;
+}
+.title-container {
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding: 0 0.8rem 0 1rem;
+}
+.video-title {
+  width: 90%;
+  font-weight: 900;
+  text-align: left;
+}
+.ellipse {
+  cursor: pointer;
+}
+.video-card-footer {
+  justify-content: space-between;
+  padding: 0 0.8rem 0 1rem;
+  margin-bottom: 1.2rem;
+}
+.creator {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1500px) {
+  .video-card {
+    width: 29rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .video-card {
+    width: 100%;
+  }
+}
