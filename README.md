@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="src/assets/logo.png" height="100" width="100" alt="logo"/>
   
-# Bookwise
+  
+# SoleMates
   A video library website for top brand sneakers
 </div>
 
