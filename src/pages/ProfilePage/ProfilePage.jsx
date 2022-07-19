@@ -1,9 +1,21 @@
+import { useNavigate } from "react-router-dom";
 import { NavBar,Aside } from "../../components"
-import { useAuth } from "../../contexts"
+import { useAuth, useData } from "../../contexts"
 import "./ProfilePage.css"
 
 export const ProfilePage=()=>{
-    const {user,logOutHandler}=useAuth();
+    const {setLoader}= useData();
+    const {user,setToken,setUser}=useAuth();
+    const navigate = useNavigate();
+
+    const logOutHandler = () => {
+        localStorage.removeItem("auth");
+        setLoader(true);
+        setTimeout(()=>setLoader(false),1000);
+        setToken(undefined);
+        setUser(undefined);
+        navigate("/");
+      };
    return(
        <>
        <NavBar/>

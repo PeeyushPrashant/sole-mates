@@ -1,17 +1,23 @@
-import { useAuth } from "../../contexts";
+import { useAuth, useData } from "../../contexts";
 import { useState } from "react";
 import {useNavigate} from "react-router-dom"
 import { NavBar } from "../../components";
 import "./Auth.css";
 
 export const SignUp=()=>{
-    const {signUpHandler}= useAuth();
+  const {setLoader} = useData();
+  const {signUpHandler,token}= useAuth();
   const [signUpForm, setSignUpForm] = useState({
     name:"",
     email:"",
     password:""
   })
   const navigate= useNavigate();
+
+  if(token){
+    setLoader(true);
+    setTimeout(()=>setLoader(false),1000);
+  }
   
     return (
       <>

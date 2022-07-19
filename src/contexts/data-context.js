@@ -35,11 +35,14 @@ const DataProvider = ({ children }) => {
   }, []);
 
   const [sideBar, setSideBar] = useState(false);
+  const [loader, setLoader] = useState(false);
   const sideBarHandler = () => {
     setSideBar((curr) => !curr);
   };
   return (
-    <DataContext.Provider value={{ state, dispatch, sideBar, sideBarHandler }}>
+    <DataContext.Provider
+      value={{ state, dispatch, sideBar, sideBarHandler, loader, setLoader }}
+    >
       {children}
     </DataContext.Provider>
   );

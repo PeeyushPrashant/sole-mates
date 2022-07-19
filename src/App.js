@@ -11,13 +11,16 @@ import {
   History,
   ProfilePage,
 } from "../src/pages";
+import { Loader } from "./components";
 import { Routes, Route } from "react-router-dom";
-import { useTheme } from "./contexts";
+import { useData, useTheme } from "./contexts";
 
 function App() {
   const { theme } = useTheme();
+  const { loader } = useData();
   return (
     <div className="App" data-theme={theme}>
+      {loader && <Loader />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

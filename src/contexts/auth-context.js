@@ -33,12 +33,12 @@ const AuthProvider = ({ children }) => {
     try {
       if (e.target.innerText === "Login with test credentials") {
         setLoginForm({
-          email: "adarshbalika@gmail.com",
-          password: "adarshBalika123",
+          email: "prashantpeeyush@gmail.com",
+          password: "Prashant123",
         });
         var response = await loginServices(
-          "adarshbalika@gmail.com",
-          "adarshBalika123"
+          "prashantpeeyush@gmail.com",
+          "Prashant123"
         );
       } else var response = await loginServices(email, password);
       if (response.status === 200 || response.status === 201) {
@@ -58,16 +58,16 @@ const AuthProvider = ({ children }) => {
     }
   };
 
-  const logOutHandler = () => {
-    localStorage.removeItem("auth");
-    setToken(undefined);
-    setUser(undefined);
-    navigate("/");
-  };
-
   return (
     <AuthContext.Provider
-      value={{ signUpHandler, loginHandler, token, logOutHandler, user }}
+      value={{
+        signUpHandler,
+        loginHandler,
+        token,
+        user,
+        setToken,
+        setUser,
+      }}
     >
       {children}
     </AuthContext.Provider>

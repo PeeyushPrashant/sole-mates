@@ -42,6 +42,9 @@
   outline: none;
   border-color: var(--primary);
 }
+::placeholder {
+  color: var(--light-grey);
+}
 .auth-btn {
   width: 95%;
 }

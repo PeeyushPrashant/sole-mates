@@ -1,14 +1,19 @@
 import { NavBar } from "../../components";
-import { useAuth } from "../../contexts"
+import { useAuth, useData } from "../../contexts"
 import {useNavigate} from "react-router-dom"
 import { useState } from "react";
 import "./Auth.css";
 
 export const Login=()=>{
     const [loginForm,setLoginForm]= useState({email:"",password:""});
-   
-    const {loginHandler} = useAuth();
+    const {setLoader} = useData();
+    const {loginHandler,token} = useAuth();
     const navigate= useNavigate();
+
+    if(token){
+      setLoader(true);
+      setTimeout(()=>setLoader(false),1000);
+    }
 
     return (
       <>
