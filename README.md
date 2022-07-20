@@ -24,6 +24,7 @@ $ npm start
 - Watch Later Video
 - History video
 - Create playlist
+- Loader
 - Authentication:
   - User Signup
   - User Login
